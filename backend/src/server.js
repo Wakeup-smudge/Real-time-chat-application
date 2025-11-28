@@ -21,7 +21,7 @@ if(process.env.NODE_ENV === "production") {
 }
 
 app.get("*", (req,res) => {
-    res.sendFile(path.join(__dirname,"../frontend/vite-project/dist/index.html"))
+    res.sendFile(path.join(__dirname,"../../frontend/vite-project/dist/index.html"))
 })
 
 app.listen(PORT, () => 
