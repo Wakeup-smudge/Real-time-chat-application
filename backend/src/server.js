@@ -17,7 +17,7 @@ app.use("/api/messages", messageRoutes);
 
 // make ready for deployment
 if(process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "../frontend/vite-project/dist")))
+    app.use(express.static(path.join(__dirname, "../../frontend/vite-project/dist")))
 }
 
 app.get("*", (req,res) => {
