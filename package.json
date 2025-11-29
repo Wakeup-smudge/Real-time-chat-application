@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install --prefix backend ",
     "build": "npm install --prefix frontend/vite-project && npm run build --prefix frontend/vite-project",
-    "start": "npm run start --prefix backend"
+    "start": "node backend/server.js"
   },
   "repository": {
     "type": "git",
