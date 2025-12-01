@@ -6,6 +6,7 @@
 
   "scripts": {
   "build": "npm install --prefix frontend --include=dev && npm run build --prefix frontend",
+  "prestart": "npm install",
   "start": "node server.js"
 },
 
