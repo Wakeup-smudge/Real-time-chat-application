@@ -6,8 +6,8 @@
 
   "scripts": {
   "build": "npm install --prefix frontend --include=dev && npm run build --prefix frontend",
-  "postinstall": "npm install --prefix backend",
-  "start": "node backend/server.js"
+  "postinstall": "npm install",
+  "start": "node server.js"
 },
 
   "keywords": [],
