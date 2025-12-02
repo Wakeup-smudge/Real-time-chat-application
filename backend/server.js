@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import path from "path";
+import { connectDB } from "./src/lib/db.js";
 
 import authRoutes from "./src/routes/auth.route.js";
 import messageRoutes from "./src/routes/message.route.js"
@@ -11,6 +12,8 @@ const app = express();
 const __dirname = path.resolve();
 
 const PORT = process.env.PORT || 3000;
+
+app.use(express.json()) //req.body
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
@@ -27,6 +30,7 @@ app.get("*", (req,res) => {
 
 }
 
-app.listen(PORT, () => 
+app.listen(PORT, () => {
  console.log("Server running on port: ", +PORT)
-);
+connectDB()
+});
